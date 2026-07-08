@@ -1,0 +1,25 @@
+gcc -E file.c -o out.i -> after preprocessor 
+gcc -S file.c -o out.asm -> after Compiler 
+gcc -C file.c -o out.o -> after Assembler 
+gcc  file.c -o out.exe -> after Linker
+
+
+
+Flags : 
+    -Wall 
+    -Wextra
+    -Werror 
+
+Optimization Levels
+    -O0 -> Disable 
+    -O1 -> basics
+    -O2 -> standard
+    -O3 -> High Performance 
+    -Os -> code size
+    -Og -> clean debug 
+
+-std = <version> -> C version 
+
+
+
+// c89 / c99 / c11 / c17 
