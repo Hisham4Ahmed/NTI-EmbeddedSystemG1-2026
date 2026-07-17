@@ -1,0 +1,75 @@
+task1  Segment Driver   at mon 
+// Segment
+    void Segment_Init(uint8_t GroupName)
+    {
+        // Select Direction
+    }
+    void DisplayNumber(uint8_t GroupName, uint8_t Number)
+    {
+        // Display Number from 0 to 9 
+        // upgrade will be to 99 
+    }
+    void DisplayRang(uint8_t GroupName,uint8_t Start , uint8_t End )
+    {
+        // Display Range with 1 sec waiting 
+    }
+---------------------------------------------------------------------------
+Task 2 Led Driver   at mon 
+// Led 
+    void Led_Init(uint8_t GroupName , uint8_t PinNumber );
+    // void Led_state(uint8_t GroupName , uint8_t PinNumber , uint8_t state);
+    #define SourceConnection  1
+    #define SinkConnection    2
+    void Led_on(uint8_t GroupName , uint8_t PinNumber , uint8_t ConnectionType)
+    {
+        if(ConnectionType==SourceConnection)
+        {
+
+        }
+        else if (ConnectionType==SinkConnection)
+        {
+            
+        }
+    }
+
+=================================================================================
+Driver Style 
+ModuleName 
+    ModuleName_Program.c      -> code     
+    ModuleName_Interface.h    -> Porototype
+    ModuleName_Private.h      -> Micros another Person can't change_it
+                                #define SourceConnection  1
+                                #define GroupA            2  
+    ModuleName_Config.h       ->
+ 
+    Led_Program.c 
+=================================================================================
+Task 3 Button Task  at mon 
+    Write C code to check on the PushButton State 
+    - if Pressed Led On 
+    - if Not pressed Led Off  
+        ConnectionType: 
+            1- Button -> PullDown Res
+            2- Led -> SinkConnection
+=================================================================================
+Task 4 AnimationTask normalleds  at next sat 
+    write c code to control on 8 led and Display the Some Different Animation 
+        for ex 
+            1 1 1 1  1 1 1 1 all On 
+            wait 2 sec  
+            led off led by led  
+               1 sec    
+            1 1 1 1 1 1 1 0 
+            1 1 1 1 1 1 0 0 
+            1 1 1 1 1 0 0 0
+            1 1 1 1 0 0 0 0
+
+            all led Blinking for 5 Sec  
+=================================================================================
+Task 5 Segment with button  at next sat 
+    write c code to control counter of 7 segment by 2 switch 
+    switch 1 if pressed Increament the number on Segment 
+    switch 2 if pressed Decreament the number on Segment
+ -> Increament maxmuim 9 
+ -> decreament minmuim 0
+=================================================================================
