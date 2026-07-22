@@ -3,8 +3,9 @@
 
 void main()
 {
-    LCD_Init(Lcd_8bitMode);
+
     KPD_Init();
+    EXTI_Init( Exti_Interrupt0,Exti_LowLevel);
     uint8_t Btn = 0 ;
     while(1)
     {
