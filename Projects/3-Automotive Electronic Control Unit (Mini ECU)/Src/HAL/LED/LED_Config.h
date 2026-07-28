@@ -8,3 +8,10 @@
 * @date
 * @copyright Copyright (c) 2026, Gestell Company
 */
+
+#ifndef LED_CONFIG_H
+#define LED_CONFIG_H
+
+
+
+#endif // LED_CONFIG_H

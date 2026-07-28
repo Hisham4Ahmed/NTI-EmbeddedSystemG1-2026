@@ -1,5 +1,5 @@
 /**
-* @file    DIO_Config.h
+* @file    ECU.c
 * @author (developer)  
 * @author(reviewer)
 * @brief  
@@ -8,10 +8,3 @@
 * @date
 * @copyright Copyright (c) 2026, Gestell Company
 */
-
-#ifndef DIO_CONFIG_H
-#define DIO_CONFIG_H
-
-
-
-#endif // DIO_CONFIG_H

@@ -1,5 +1,5 @@
 /**
-* @file    DIO_Config.h
+* @file    Button_Interface.h
 * @author (developer)  
 * @author(reviewer)
 * @brief  
@@ -9,9 +9,9 @@
 * @copyright Copyright (c) 2026, Gestell Company
 */
 
-#ifndef DIO_CONFIG_H
-#define DIO_CONFIG_H
+#ifndef BUTTON_INTERFACE_H
+#define BUTTON_INTERFACE_H
 
 
 
-#endif // DIO_CONFIG_H
+#endif // BUTTON_INTERFACE_H

@@ -8,3 +8,10 @@
 * @date
 * @copyright Copyright (c) 2026, Gestell Company
 */
+
+#ifndef BIT_MATH_H
+#define BIT_MATH_H
+
+
+
+#endif // BIT_MATH_H

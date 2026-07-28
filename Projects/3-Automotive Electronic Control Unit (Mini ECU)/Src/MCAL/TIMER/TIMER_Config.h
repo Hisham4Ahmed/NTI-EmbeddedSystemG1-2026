@@ -1,5 +1,5 @@
 /**
-* @file    DIO_Config.h
+* @file    TIMER_Config.h
 * @author (developer)  
 * @author(reviewer)
 * @brief  
@@ -9,9 +9,9 @@
 * @copyright Copyright (c) 2026, Gestell Company
 */
 
-#ifndef DIO_CONFIG_H
-#define DIO_CONFIG_H
+#ifndef TIMER_CONFIG_H
+#define TIMER_CONFIG_H
 
 
 
-#endif // DIO_CONFIG_H
+#endif // TIMER_CONFIG_H
