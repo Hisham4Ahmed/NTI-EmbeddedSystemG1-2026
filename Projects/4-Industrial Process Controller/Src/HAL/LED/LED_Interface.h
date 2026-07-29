@@ -1,7 +1,7 @@
 /**
 * @file    LED_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LED_INTERFACE_H
+#endif /* LED_INTERFACE_H */

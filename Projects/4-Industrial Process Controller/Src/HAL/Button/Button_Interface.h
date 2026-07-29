@@ -1,7 +1,7 @@
 /**
 * @file    Button_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // BUTTON_INTERFACE_H
+#endif /* BUTTON_INTERFACE_H */

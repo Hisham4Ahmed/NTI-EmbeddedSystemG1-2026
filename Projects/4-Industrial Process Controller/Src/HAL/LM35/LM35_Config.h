@@ -1,7 +1,7 @@
 /**
 * @file    LM35_Config.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LM35_CONFIG_H
+#endif /* LM35_CONFIG_H */

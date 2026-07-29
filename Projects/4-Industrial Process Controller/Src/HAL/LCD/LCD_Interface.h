@@ -1,7 +1,7 @@
 /**
 * @file    LCD_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LCD_INTERFACE_H
+#endif /* LCD_INTERFACE_H */

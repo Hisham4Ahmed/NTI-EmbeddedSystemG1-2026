@@ -1,7 +1,7 @@
 /**
 * @file    ADC_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // ADC_PRIVATE_H
+#endif /* ADC_PRIVATE_H */

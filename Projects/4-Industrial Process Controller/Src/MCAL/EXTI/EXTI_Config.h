@@ -1,7 +1,7 @@
 /**
 * @file    EXTI_Config.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // EXTI_CONFIG_H
+#endif /* EXTI_CONFIG_H */

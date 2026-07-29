@@ -1,7 +1,7 @@
 /**
 * @file    BIT_MATH.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // BIT_MATH_H
+#endif /* BIT_MATH_H */

@@ -1,7 +1,7 @@
 /**
 * @file    DIO_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // DIO_INTERFACE_H
+#endif /* DIO_INTERFACE_H */

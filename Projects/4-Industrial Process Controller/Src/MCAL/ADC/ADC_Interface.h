@@ -1,7 +1,7 @@
 /**
 * @file    ADC_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // ADC_INTERFACE_H
+#endif /* ADC_INTERFACE_H */

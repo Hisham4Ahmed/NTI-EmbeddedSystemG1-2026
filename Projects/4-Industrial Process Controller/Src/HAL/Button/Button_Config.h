@@ -1,7 +1,7 @@
 /**
 * @file    Button_Config.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // BUTTON_CONFIG_H
+#endif /* BUTTON_CONFIG_H */

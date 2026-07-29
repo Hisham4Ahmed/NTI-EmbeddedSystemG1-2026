@@ -1,7 +1,7 @@
 /**
 * @file    Buzzer_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // BUZZER_INTERFACE_H
+#endif /* BUZZER_INTERFACE_H */

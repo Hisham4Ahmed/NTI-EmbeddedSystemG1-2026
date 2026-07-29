@@ -1,7 +1,7 @@
 /**
 * @file    LCD_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LCD_PRIVATE_H
+#endif /* LCD_PRIVATE_H */

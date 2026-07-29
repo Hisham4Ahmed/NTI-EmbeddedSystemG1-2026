@@ -1,7 +1,7 @@
 /**
 * @file    LCD_Config.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LCD_CONFIG_H
+#endif /* LCD_CONFIG_H */

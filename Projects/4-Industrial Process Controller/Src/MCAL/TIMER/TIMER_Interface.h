@@ -1,7 +1,7 @@
 /**
 * @file    TIMER_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // TIMER_INTERFACE_H
+#endif /* TIMER_INTERFACE_H */

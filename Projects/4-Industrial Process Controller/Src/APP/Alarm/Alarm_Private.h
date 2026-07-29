@@ -1,7 +1,7 @@
 /**
-* @file    StateMachine.h
+* @file    Alarm_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -9,9 +9,9 @@
 * @copyright Copyright (c) 2026, Gestell Company
 */
 
-#ifndef STATEMACHINE_H
-#define STATEMACHINE_H
+#ifndef ALARM_PRIVATE_H
+#define ALARM_PRIVATE_H
 
 
 
-#endif // STATEMACHINE_H
+#endif /* ALARM_PRIVATE_H */

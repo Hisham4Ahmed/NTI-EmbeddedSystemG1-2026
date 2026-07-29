@@ -1,7 +1,7 @@
 /**
 * @file    STD_TYPES.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // STD_TYPES_H
+#endif /* STD_TYPES_H */

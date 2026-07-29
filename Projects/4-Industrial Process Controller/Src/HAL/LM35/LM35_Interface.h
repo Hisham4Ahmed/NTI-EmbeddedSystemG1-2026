@@ -1,7 +1,7 @@
 /**
 * @file    LM35_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // LM35_INTERFACE_H
+#endif /* LM35_INTERFACE_H */

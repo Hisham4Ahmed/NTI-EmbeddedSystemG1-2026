@@ -1,7 +1,7 @@
 /**
 * @file    POT_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // POT_PRIVATE_H
+#endif /* POT_PRIVATE_H */

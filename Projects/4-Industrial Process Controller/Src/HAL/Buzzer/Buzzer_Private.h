@@ -1,7 +1,7 @@
 /**
 * @file    Buzzer_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // BUZZER_PRIVATE_H
+#endif /* BUZZER_PRIVATE_H */

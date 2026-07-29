@@ -1,7 +1,7 @@
 /**
 * @file    UART_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // UART_INTERFACE_H
+#endif /* UART_INTERFACE_H */

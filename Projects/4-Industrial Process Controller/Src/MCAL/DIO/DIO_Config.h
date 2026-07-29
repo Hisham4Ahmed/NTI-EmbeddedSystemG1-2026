@@ -1,7 +1,7 @@
 /**
 * @file    DIO_Config.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // DIO_CONFIG_H
+#endif /* DIO_CONFIG_H */

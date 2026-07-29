@@ -1,7 +1,7 @@
 /**
 * @file    POT_Interface.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -14,4 +14,4 @@
 
 
 
-#endif // POT_INTERFACE_H
+#endif /* POT_INTERFACE_H */
