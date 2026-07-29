@@ -5,31 +5,35 @@
 
 static void (*Timer0_OVFCallBack)(void)=Null;
 static void (*Timer0_CTCCallBack)(void)=Null;
-void TIMER0_Init(uint8_t TimerMode)
+void TIMER0_Init(Timer0_Config_t Config)
 {
-    if(TimerMode==Timer0_NormalMode)
+    if(Config.TimerMode==Timer0_NormalMode)
     {
         // Select the Normal Mode from TCCR0 
-            ClearBit(TCCR0_Reg,Timer0_WGM00);
-            ClearBit(TCCR0_Reg,Timer0_WGM01);
+        ClearBit(TCCR0_Reg,Timer0_WGM00);
+        ClearBit(TCCR0_Reg,Timer0_WGM01);
+        //Update the Preload value 
+        TCNT0_Reg=Config.PreloadValue;
         // Enable the Interrupt for OverFlow 
         SetBit(TIMSK_Reg,Timer0_TOIE0);
-
+        
     }
-    else if (TimerMode==Timer0_CTCMode)
+    else if (Config.TimerMode==Timer0_CTCMode)
     {
         // Select the CTC Mode from TCCR0 
         ClearBit(TCCR0_Reg,Timer0_WGM00);
         SetBit(TCCR0_Reg,Timer0_WGM01);
+        // Update the Compare  value 
+        OCR0_Reg=Config.CompareMatchValue;
         // Enable the Interrupt for CompareMatch 
         SetBit(TIMSK_Reg,Timer0_OCIE0);
+        
     }
 
 }
 
 void TIMER0_Start(uint8_t ClockSelectValue)
 {
-
     if (ClockSelectValue!=Timer0_Disable)
     {
       TCCR0_Reg = (TCCR0_Reg &~ClockSelectMask)|ClockSelectValue;
@@ -40,6 +44,14 @@ void TIMER0_Stop(void)
     TCCR0_Reg = (TCCR0_Reg &~ClockSelectMask)|Timer0_Disable;
 }
 
+void TIMER0_SetPreload(uint8_t PreloadValue)
+{
+    TCNT0_Reg=PreloadValue;
+}
+void TIMER0_SetCompare(uint8_t CompareValue)
+{
+    OCR0_Reg=CompareValue;
+}
 
 void TIMER0_SetCallBackFunction(uint8_t TimerInterruptType, void (*PF)(void))
 {
@@ -63,11 +75,11 @@ void TIMER0_SetCallBackFunction(uint8_t TimerInterruptType, void (*PF)(void))
 void __vector_10(void)   __attribute__((signal));
 void __vector_10(void)
 {
-    
+    Timer0_CTCCallBack();
 }
 //OverFlow 
 void __vector_11(void)   __attribute__((signal));
 void __vector_11(void)
 {
-
+    Timer0_OVFCallBack();
 }

@@ -1,8 +1,8 @@
 {
   "projectName": "LayerdArch",
-  "projectPath": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week3/Day15/Code/LayerdArch",
-  "outputPath": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week3/Day15/Code/LayerdArch",
-  "outputName": "EXTITest1",
+  "projectPath": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week4/Day17/Code/LayerdArch",
+  "outputPath": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week4/Day17/Code/LayerdArch",
+  "outputName": "",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
@@ -25,6 +25,6 @@
   "port": "",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week3/Day15/Code/LayerdArch/EXTITest1.hex",
+  "firmwareFile": "/home/hesham/Desktop/NTI/NTI-EmbeddedSystemG1-2026/Week4/Day17/Code/LayerdArch/LayerdArch.hex",
   "programmer": "usbasp"
 }

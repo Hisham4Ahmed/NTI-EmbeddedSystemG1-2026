@@ -49,8 +49,18 @@
 #define Timer0_CompareMatchInterrupt 1 
 
 
+// //Compare Match 
+// void __vector_10(void)   __attribute__((signal));
+// //OverFlow 
+// void __vector_11(void)   __attribute__((signal));
 
 
+typedef struct
+{
+    uint8_t TimerMode ;
+    uint8_t PreloadValue;
+    uint8_t CompareMatchValue;
+}Timer0_Config_t ;
 
 
 #endif

@@ -3,57 +3,54 @@
 #include "MCAL/DIO/DIO_Interface.h"
 #include "HAL/LED/LED_Interface.h"
 #include "MCAL/GIE/GIE_Interface.h"
-static volatile uint8_t UartData = 0 ;
+#include "MCAL/Timer0/Timer0_Interface.h"
+
+void Scheduler()
+{
+    static uint32_t count = 0 ;
+    count++;
+    if(count==11719)
+    {
+        // Action
+  
+        // Update Preload 
+        TIMER0_SetPreload(64);
+        // rest Count
+        count=0;
+    }
+}
 void main()
 {
-    /*
-        Program to control on the 2 Led 
-        first Led will be toggle every sec -> Background   -> half done 
-        secod led will be turn on or off when pressed on Button  -> Forground 
-            Button -> EXTI 
-            Led2  -> ISR 
-    */
-   //Leds
-    // 1- Led Toggle 
-    Led_Init(Dio_GroupA,Dio_Pin0);
-    // 1- Led On OFf By Switch 
-    Led_Init(Dio_GroupA,Dio_Pin1);
-   //Int0 -> PD2    as input 
-   DIO_InitPin(Dio_GroupD,Dio_Pin2,Input);
-   EXTI_Init(Exti_Interrupt0,Exti_AnyChange);
-   EXTI_Enable(Exti_Interrupt0);
-       GIE_Enable(); 
-    
-   while(1)
-   {
-    Led_on(Dio_GroupA,Dio_Pin0,SourceConnection);
-    _delay_ms(1000);
-    Led_off(Dio_GroupA,Dio_Pin0,SourceConnection);
-    _delay_ms(1000);
-
-   }
-
-    // GIE_Disable(); // DeadCode 
+    // System Toggle Two Led 
+        // Led1 toggle Every 1 Sec -> While(1)
+        // Led2 toggle Every 3 Sec -> Timer
+        /*
+            Timer = 8bit   systemfreq= 8Mhz prescaller= 8 
+            Req=3sec 
+            CLKTIME      = Prescaller/SystemFreq -> 1uSec
+            OverFlowtime = 2^Size * CLKTIME = 256uSec
+            RelationReq&Over => Req>OverFlow 
+            #No OF OVF Count =   ReqTime/OverFlowTime = 3000000/256 
+                             =   11718.75 => 11719
+            Preload          =    2^Size *(1-0.y) = 256 * (1-0.75) = 64 
+        */
+       Timer0_Config_t ToggleSysteConf = 
+       {
+        .TimerMode=Timer0_NormalMode,
+        .PreloadValue=64,
+       };
+       Led_Init(Dio_GroupA,Dio_Pin0);
+       Led_Init(Dio_GroupA,Dio_Pin1);
+       TIMER0_Init(ToggleSysteConf);
+       TIMER0_SetCallBackFunction(Timer0_OverFlowInterrupt,ToggleLed1);
+       GIE_Enable();
+       TIMER0_Start(Timer0_Prescaller8);
+       while(1)
+       {
+        Led_Toggle(Dio_GroupA,Dio_Pin1);
+        _delay_ms(500);
+       }
 }
 
-void __vector_1(void)  __attribute__((signal));
-void __vector_1(void)
-{
-    static uint8_t LedState = Off;
-    if(LedState==Off)
-    {
-        // LedON
-        Led_on(Dio_GroupA,Dio_Pin1,SourceConnection);
-        LedState= On;
-        UartData = UDR_Reg;
-    }
-    else if (LedState==On)
-    {
-        //Led OFF 
-        Led_off(Dio_GroupA,Dio_Pin1,SourceConnection);
-        LedState=Off;
 
-    }
- 
-}
 
