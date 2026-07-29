@@ -1,7 +1,7 @@
 /**
-* @file    ECU_Manager.h
+* @file    TIMER_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -9,9 +9,9 @@
 * @copyright Copyright (c) 2026, Gestell Company
 */
 
-#ifndef ECU_MANAGER_H
-#define ECU_MANAGER_H
+#ifndef TIMER_PRIVATE_H
+#define TIMER_PRIVATE_H
 
 
 
-#endif // ECU_MANAGER_H
+#endif /* TIMER_PRIVATE_H */

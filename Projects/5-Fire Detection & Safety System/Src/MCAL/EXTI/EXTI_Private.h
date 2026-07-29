@@ -1,7 +1,7 @@
 /**
-* @file    ECU.h
+* @file    EXTI_Private.h
 * @author (developer)  
-* @author(reviewer)
+* @author (reviewer)
 * @brief  
 * @details
 * @version
@@ -9,9 +9,9 @@
 * @copyright Copyright (c) 2026, Gestell Company
 */
 
-#ifndef ECU_H
-#define ECU_H
+#ifndef EXTI_PRIVATE_H
+#define EXTI_PRIVATE_H
 
 
 
-#endif // ECU_H
+#endif /* EXTI_PRIVATE_H */

@@ -1,0 +1,14 @@
+Repo : 
+    1- Public 
+    2- Member of team in github repo 
+    3- Add me to you project Repo 
+    4- Hardware folder contain the Schematic 
+    5- Src folder contain the SW 
+    6- write your Readme for project and mention the NTI & Gestell 
+-----------------------------------------------------------------------------------
+Plan : Gestell Channel on youtube 
+      W -> Timer (OVF-CTC)
+      T -> Timer (PWM[Servo]-Inroduction Communication Protocl)
+(8-2) F -> UART + Driver + therotical SPI 
+      M -> Driver SPI +  QA   project 
+      T -> project Disscussion 
