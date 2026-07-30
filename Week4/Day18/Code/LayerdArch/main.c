@@ -8,28 +8,35 @@
 
 // generate a 1 kHz PWM signal using a timer.
 
-// Prescaller 
-// timer0 
-// Dutycycle 
+// Prescaller = 8
+// timer0  = 8bit 
+
+//PWM Frequence =  SystemFreq / Prescaller * 2^n ;
+// ->             8Mhz / 8 * 256 => 3906.25 -> 3.9Khz
+// ->             8Mhz / 64 * 256 => 488.28125 -> 0.488khz
+// ->             16Mhz / 64 * 256 => 976.5625 -> 
+
+
+
 void main()
 {
-    Timer0_Config_t   PWMConfig = 
-    {
-        .TimerMode=Timer0_FastPWM,
-        .PWMOutputMode=Timer0_OC0NinInverting,
-    };
-    TIMER0_Init(PWMConfig);
-    DIO_InitPin(Dio_GroupB,Dio_Pin3,Output);
-    TIMER0_Start(Timer0_Prescaller8);
-    while(1)
-    {
-        TIMER0_SetPWMDutyCycle(50);
-        _delay_ms(1000);
+    // Timer0_Config_t   PWMConfig = 
+    // {
+    //     .TimerMode=Timer0_FastPWM,
+    //     .PWMOutputMode=Timer0_OC0NinInverting,
+    // };
+    // TIMER0_Init(PWMConfig);
+    // DIO_InitPin(Dio_GroupB,Dio_Pin3,Output);
+    // TIMER0_Start(Timer0_Prescaller8);
+    // while(1)
+    // {
+    //     TIMER0_SetPWMDutyCycle(50);
+    //     _delay_ms(1000);
         
-        TIMER0_SetPWMDutyCycle(90);
-        _delay_ms(1000);
+    //     TIMER0_SetPWMDutyCycle(90);
+    //     _delay_ms(1000);
 
-    }
+    // }
 }
 
 
