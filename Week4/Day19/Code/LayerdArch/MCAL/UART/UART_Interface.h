@@ -19,8 +19,14 @@
 
 
 void UART_Init(Uart_Config_t Uart_Config);
+
 void UART_SendBytePolling(uint16_t Data);
 uint16_t UART_ReceiveBytePolling();
+void UART_SendStringPolling(uint8_t* String);
+void UART_ReceiveStringPolling(uint8_t* Buffer, uint8_t Terminator);
+
+
+
 
 void UART_EnableRXInterrupt();
 void UART_EnableTXInterrupt();
@@ -36,6 +42,13 @@ void UART_EnableTX();
 void UART_DisableRX();
 void UART_DisableTX();
 
+
+
+
+void UART_SendByteAsync(uint16_t Data);
+void UART_SetRXCallback(void (*Callback)(uint16_t));
+void UART_SetTXCallback(void (*Callback)(void));
+void UART_SetRECallback(void (*Callback)(void));
 
 
 

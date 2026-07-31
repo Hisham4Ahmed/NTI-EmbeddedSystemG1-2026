@@ -60,23 +60,32 @@
 #define Uart_EnableTxOnly   1 
 #define Uart_EnableRxAndTx  2
 
+
+#define Uart_InterruptDisabled      0  
+#define Uart_InterruptRxOnly        1   
+#define Uart_InterruptTxOnly        2   
+#define Uart_InterruptUdreOnly      3   
+#define Uart_InterruptRxTx          4   
+#define Uart_InterruptRxUdre        5  
+#define Uart_InterruptTxUdre        6   
+#define Uart_InterruptAll           7   
+
 typedef struct 
 {
     uint8_t ModeSelect ; 
     uint8_t StopBitSelect;
     uint8_t ParitySelect;
     uint8_t SizeCharacterSelect;
-    uint8_t BaudRate;
+    uint32_t BaudRate;
     uint8_t EnbaleSelect ;
-    // uint8_t InterruptSelect ;
+    uint8_t SpeedMode;
+    uint8_t InterruptSelect ;
      
 }Uart_Config_t;
 
-//RX
-void __vector_13(void) __attribute__((signal));
-//RE
-void __vector_14(void) __attribute__((signal));
-//TX
-void __vector_15(void) __attribute__((signal));
+/* ISR Vectors */
+void __vector_13(void) __attribute__((signal,used)); /* RX Complete */
+void __vector_14(void) __attribute__((signal,used)); /* UDR Empty */
+void __vector_15(void) __attribute__((signal,used)); /* TX Complete */
 
 #endif
