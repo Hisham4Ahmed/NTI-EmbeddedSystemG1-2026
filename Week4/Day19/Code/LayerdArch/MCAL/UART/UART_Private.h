@@ -76,11 +76,10 @@ typedef struct
     uint8_t StopBitSelect;
     uint8_t ParitySelect;
     uint8_t SizeCharacterSelect;
-    uint32_t BaudRate;
-    uint8_t EnbaleSelect ;
     uint8_t SpeedMode;
+    uint32_t BaudRate;
     uint8_t InterruptSelect ;
-     
+    uint8_t EnbaleSelect ;
 }Uart_Config_t;
 
 /* ISR Vectors */

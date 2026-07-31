@@ -17,38 +17,45 @@
     4- 
 */
 
-
+/*Initialization API*/
 void UART_Init(Uart_Config_t Uart_Config);
 
+/* Polling (Blocking)API*/
 void UART_SendBytePolling(uint16_t Data);
 uint16_t UART_ReceiveBytePolling();
-void UART_SendStringPolling(uint8_t* String);
+void UART_SendStringPolling(uint8_t* String); // Characters 
 void UART_ReceiveStringPolling(uint8_t* Buffer, uint8_t Terminator);
+void UART_SendBufferPolling(uint8_t * Buffer , uint16_t Length);//Raw Data 
 
 
 
 
-void UART_EnableRXInterrupt();
-void UART_EnableTXInterrupt();
-void UART_EnableREInterrupt();
+/*Interrupt API*/
+void UART_SendByteInterrupt(uint16_t Data);
 
-void UART_DisableRXInterrupt();
-void UART_DisableTXInterrupt();
-void UART_DisableREInterrupt();
+void UART_EnableRXInterrupt();//Done
+void UART_EnableTXInterrupt();//Done
+void UART_EnableREInterrupt();//Done
+
+void UART_DisableRXInterrupt();//Done
+void UART_DisableTXInterrupt();//Done
+void UART_DisableREInterrupt();//Done
+
+void UART_SetRXCallback(void (*PF)(uint16_t));// almost Done
+void UART_SetTXCallback(void (*PF)(void));// almost Done
+void UART_SetRECallback(void (*PF)(void));// almost Done
+
+/* Driver Control API */
+void UART_EnableRX();//Done
+void UART_EnableTX();//Done
+void UART_DisableRX();//Done
+void UART_DisableTX();//Done
 
 
-void UART_EnableRX();
-void UART_EnableTX();
-void UART_DisableRX();
-void UART_DisableTX();
 
 
 
 
-void UART_SendByteAsync(uint16_t Data);
-void UART_SetRXCallback(void (*Callback)(uint16_t));
-void UART_SetTXCallback(void (*Callback)(void));
-void UART_SetRECallback(void (*Callback)(void));
 
 
 

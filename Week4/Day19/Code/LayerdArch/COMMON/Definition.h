@@ -13,12 +13,14 @@
 #define Off     0 
 #define On      1 
 
-#define Null (void*)0x00 
-
+#define Null      (void*)0x00 
+#define NullChar    '\0'
 #define FlagUp       1 
 #define FlagDown     0 
 
 
 #define ClearRegister 0x00
+
+#define FCPU     8000000UL
 
 #endif 
